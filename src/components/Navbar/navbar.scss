@@ -79,6 +79,7 @@
                 @media (max-width: 760px) {
                     .navbar-links {
                         display: block;
+                        background-color: #35353B;
                         
                         label { 
                             display: block;
@@ -90,7 +91,6 @@
                             background:none; 
                             cursor: pointer; 
                         }
-
                         &:active ul { 
                             display: none;  
                         }
@@ -103,7 +103,8 @@
                             display: none; 
                         
                             li { 
-                                width: 100%; 
+
+                                width: 100vw; 
                                 margin: 20px 0 20px 20px;
                                
                                 &:first-child {
