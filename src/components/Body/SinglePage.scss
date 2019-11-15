@@ -1,0 +1,68 @@
+@import '../../style/variables';
+@import '../../style/mixins';
+
+
+.body-portfolio-item {
+    width: 500px;
+    padding: 20px 40px;
+    
+    div {
+        overflow: hidden;
+
+        img {
+            margin-bottom: 6px;
+            transition: 0.5s all;
+
+            &:hover {
+                transform: scale(1.1)
+            }
+        }
+    }
+
+    .body-skills-item {
+        padding: 10px;
+
+        .font-style-title {
+            @include fontStyle( $titleFontSize, $boldFontWeight, $narrowLetterSpacing);
+            margin: 0 0 8px;
+        }
+
+        .font-style-tech {
+            @include fontStyle( $smallTitleFontSize, $boldFontWeight, $narrowLetterSpacing);
+            margin: 0 0 8px;
+        }
+
+        .font-style-icons {
+            display: flex;
+            align-items: center;
+            
+            .icon {
+                width: auto;
+            }
+
+            svg {
+                margin: 5px;
+                font-size: 30px;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .body-portfolio-item {
+        width: 80%;    
+    }
+}
+
+@media(max-width: 992px) {
+    .body-portfolio-item {
+        width: 100%;    
+    }
+}
+
+@media(max-width: 768px) {
+    .body-portfolio-item {
+        padding: 10px;   
+    }
+}
