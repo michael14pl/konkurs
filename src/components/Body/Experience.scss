@@ -1,7 +1,9 @@
     @import '../../style/variables.scss';
     @import '../../style/mixins.scss';
 
-    
+    .experience {
+        height: auto;
+
         .experience-header {
             text-align: center;
             padding: 40px 0;
@@ -15,8 +17,14 @@
                 color: $smallTitleColor;
             }
         }
+
+        @media (max-width: 576px) {
+            .experience-header {
+                padding: 10px 0;
+            }
+        }
     
-    .awards {
+    .experience-technologies {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -24,8 +32,8 @@
         padding: 20px;
         background-color: rgb(245, 245, 245);
 
-        .award {
-            margin: 30px 60px;
+        .technology {
+            margin: 20px 40px;
             width: auto;
             text-align: center;
             color: $smallTitleColor;
@@ -33,9 +41,9 @@
             cursor: pointer;
             filter: grayscale(100%);
 
-            .award-icon {
-                height: 80px;
-                font-size: 80px;
+            .technology-icon {
+                height: 60px;
+                font-size: 60px;
             }
 
             &:hover {
@@ -43,9 +51,48 @@
                 filter: grayscale(0);
             }
 
-            .award-title {
-                @include fontStyle($titleFontSize, $lightFontWeight, $narrowLetterSpacing);
+            .technology-title {
+                @include fontStyle($smallTitleFontSize, $lightFontWeight, $narrowLetterSpacing);
                 margin: 16px 0 0 0;
             }
         }
+
+        @media (max-width: 576px) {
+            .technology {
+                margin: 15px;
+            
+                .technology-icon {
+                    height: 40px;
+                    font-size: 40px;
+                }
+
+                .technology-title {
+                    @include fontStyle(12px, $lightFontWeight, $narrowLetterSpacing);
+                    margin: 8px 0 0 0;
+                
+                }
+            }
+        }
     }
+
+    .experience-pages {
+        .container {
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0;
+            }
+        }
+    }
+}

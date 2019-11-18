@@ -6,16 +6,16 @@ import { Icon } from '@iconify/react';
 
 const SinglePage = ({ page }) => {
     return (
-        <div className="body-portfolio-item" >
-            <div>
+        <div className="single-page" >
+            <div className="single-page-link">
                 <a href={page.address} target="_blank" rel="noopener noreferrer"><img src={page.image} alt="page-figure" /></a>
 
             </div>
-            <div className="body-skills-item">
-                <div className="font-style-title">{page.title}</div>
+            <div className="single-page-content">
+                <div className="single-page-content-title">{page.title}</div>
                 <div className="text-style">{page.description}</div>
-                <div className="font-style-tech">Technologie</div>
-                <div className="font-style-icons">
+                <div className="single-page-content-tech">Technologie</div>
+                <div className="single-page-content-icons">
                     {page.technologies && page.technologies.map(technology => <Icon icon={technology.icon} key={technology.name} />)}
                 </div>
             </div>
